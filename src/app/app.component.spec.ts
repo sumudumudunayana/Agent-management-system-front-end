@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Agent-management-system-front-end' title`, () => {
+  it(`should have the 'UrbanNest-Admin' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Agent-management-system-front-end');
+    expect(app.title).toEqual('UrbanNest-Admin');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Agent-management-system-front-end');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, UrbanNest-Admin');
   });
 });
