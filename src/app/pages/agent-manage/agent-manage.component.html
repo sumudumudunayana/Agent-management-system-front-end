@@ -1,0 +1,25 @@
+<div class="banner">
+    <app-navbar></app-navbar>
+    <div class="searchbar">
+        <input type="text" class="search" placeholder="Enter Agent ID" [(ngModel)]="id" >
+        <button class="searchbtn" (click)="getAgentInfo()" >Search</button>
+    </div>
+
+    <div class="details">
+              
+        <div *ngIf="agentInfo.id">
+          <p>Agent ID: <span class="txt">{{ agentInfo.id }}</span></p>
+          <p>Name: <input class="txt" [(ngModel)]="updatedAgentInfo.agentName" /></p>
+          <p>Contact Contact: <input class="txt" [(ngModel)]="updatedAgentInfo.agentContact" /></p>
+          <p>Address: <input class="txt" [(ngModel)]="updatedAgentInfo.agentAddress" /></p>
+          <p>Email: <input class="txt" [(ngModel)]="updatedAgentInfo.agentEmail" /></p>
+          <p>Rating: <input class="txt" [(ngModel)]="updatedAgentInfo.agentRating" /></p>
+          <p>Date: <input class="txt" [(ngModel)]="updatedAgentInfo.agentDate" /></p>
+        <div class="buttons">
+          <button (click)="updateAgent()" class="update">Update</button>
+          <button (click)="deleteAgent()" class="delete">Delete</button>
+        </div>
+        </div>
+      </div>
+      
+</div>
