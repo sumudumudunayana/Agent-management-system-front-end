@@ -1,0 +1,38 @@
+<div class="banner">
+  <app-navbar></app-navbar>
+  <div class="searchbar">
+    <input
+      type="text"
+      class="search"
+      placeholder="Enter Admin ID"
+      [(ngModel)]="id"
+    />
+    <button class="searchbtn" (click)="getAdminInfo()">Search</button>
+  </div>
+
+  <div class="details">
+    <div *ngIf="adminInfo.id">
+      <p>
+        Admin ID: <span class="txt">{{ adminInfo.id }}</span>
+      </p>
+      <p>
+        Name : <input class="txt" [(ngModel)]="updatedadminInfo.adminName" />
+      </p>
+      <p>
+        Contact:
+        <input class="txt" [(ngModel)]="updatedadminInfo.adminContact" />
+      </p>
+      <p>
+        Address:
+        <input class="txt" [(ngModel)]="updatedadminInfo.adminAddress" />
+      </p>
+      <p>
+        Email: <input class="txt" [(ngModel)]="updatedadminInfo.adminEmail" />
+      </p>
+      <div class="buttons">
+        <button (click)="updateAdmin()" class="update">Update</button>
+        <button (click)="deleteAdmin()" class="delete">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

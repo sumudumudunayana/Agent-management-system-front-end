@@ -1,0 +1,119 @@
+.banner {
+    background-color: #004d40;
+    width: 100%;
+    min-height: 150vh;
+    color: #a7ffeb;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+
+.search {
+    width: 30%;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: rgba(0, 77, 64, 0.3);
+    border: 1.5px solid #00796b;
+    color: #a7ffeb;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.search:focus {
+    outline: none;
+    background-color: #00695c;
+    border-color: #80cbc4;
+    box-shadow: 0 0 8px 2px #80cbc4aa;
+    color: #e0f2f1;
+}
+
+.searchbtn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #00796b;
+    color: #a7ffeb;
+    cursor: pointer;
+    margin-left: 10px;
+    box-shadow: 0 4px 12px rgba(0, 121, 107, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchbtn:hover {
+    background-color: #004d40;
+    box-shadow: 0 6px 18px rgba(0, 77, 64, 0.8);
+}
+
+.details {
+    text-align: left;
+    margin: 4%;
+    margin-left: 25%;
+    padding: 1.5%;
+    border-radius: 8px;
+    background-color: rgba(0, 77, 64, 0.85);
+    color: #a7ffeb;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 77, 64, 0.7);
+    border: 1px solid #00796b;
+    line-height: 1.6;
+    width: 50%;
+}
+
+.txt {
+    margin-left: 1%;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    padding: 1%;
+    border-radius: 8px;
+    background-color: rgba(0, 77, 64, 0.85);
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 77, 64, 0.7);
+    border: 1px solid #00796b;
+    line-height: 1.6;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.update {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #00796b;
+    color: #a7ffeb;
+    cursor: pointer;
+    margin-left: 10px;
+    box-shadow: 0 4px 12px rgba(0, 121, 107, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.update:hover {
+    background-color: #004d40;
+    box-shadow: 0 6px 18px rgba(0, 77, 64, 0.8);
+}
+
+.delete {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #b30b0b; 
+    color: #fbb6b6;
+    cursor: pointer;
+    margin-left: 10px;
+    box-shadow: 0 4px 12px rgba(179, 11, 11, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #7a0707;
+    box-shadow: 0 6px 18px rgba(122, 7, 7, 0.8);
+}
