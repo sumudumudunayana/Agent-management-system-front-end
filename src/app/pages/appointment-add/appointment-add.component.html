@@ -1,0 +1,58 @@
+<div class="banner">
+  <app-navbar></app-navbar>
+  <form #appointmentForm="ngForm">
+  <div class="form">
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="appointment.appointmentTitle"
+        name="appointmentTitle"
+        placeholder="Enter Title"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="appointment.appointmentDate"
+        name="appointmentDate"
+        placeholder="Enter Date"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="appointment.appointmentCreatedBy"
+        name="appointmentCreatedBy"
+        placeholder="Enter Name"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="appointment.appointmentStatus"
+        name="appointmentStatus"
+        placeholder="Enter Status"
+        required
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="addAppointment(); clearFields()"
+    >
+      Add Appointment
+    </button>
+  </div>
+</form>
+</div>
