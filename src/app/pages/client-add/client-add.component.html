@@ -1,0 +1,69 @@
+<div class="banner">
+  <app-navbar></app-navbar>
+  <form #propertyForm="ngForm">
+    <div class="form">
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="client.clientFirstName"
+          name="clientFirstName"
+          placeholder="Enter First Name"
+          required
+        />
+      </div>
+
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="client.clientLastName"
+          name="clientLastName"
+          placeholder="Enter Last Name"
+          required
+        />
+      </div>
+
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="client.clientAddress"
+          name="clientAddress"
+          placeholder="Enter  Address"
+          required
+        />
+      </div>
+
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="client.clientEmail"
+          name="clientEmail"
+          placeholder="Enter Email"
+          required
+        />
+      </div>
+
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="client.clientPhoneNumber"
+          name="clientPhoneNumber"
+          placeholder="Enter Phone Number"
+          required
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="addClient(); clearFields()"
+      >
+        Add Client
+      </button>
+    </div>
+  </form>
+</div>
