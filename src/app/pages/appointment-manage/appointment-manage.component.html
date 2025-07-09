@@ -1,0 +1,23 @@
+<div class="banner">
+    <app-navbar></app-navbar>
+    <div class="searchbar">
+        <input type="text" class="search" placeholder="Enter Appointment ID" [(ngModel)]="id" >
+        <button class="searchbtn" (click)="getAppointmentInfo()" >Search</button>
+    </div>
+
+    <div class="details">
+              
+        <div *ngIf="appointmentInfo.id">
+          <p>Appointment ID: <span class="txt">{{ appointmentInfo.id }}</span></p>
+          <p>Title: <input class="txt" [(ngModel)]="updatedAppointmentInfo.appointmentTitle" /></p>
+          <p>Date Contact: <input class="txt" [(ngModel)]="updatedAppointmentInfo.appointmentDate" /></p>
+          <p>Created By: <input class="txt" [(ngModel)]="updatedAppointmentInfo.appointmentCreatedBy" /></p>
+          <p>Status: <input class="txt" [(ngModel)]="updatedAppointmentInfo.appointmentStatus" /></p>
+        <div class="buttons">
+          <button (click)="updateAppointment()" class="update">Update</button>
+          <button (click)="deleteAppointment()" class="delete">Delete</button>
+        </div>
+        </div>
+      </div>
+      
+</div>
