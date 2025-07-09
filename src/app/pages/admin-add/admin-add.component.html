@@ -1,0 +1,58 @@
+<div class="banner">
+  <app-navbar></app-navbar>
+  <form #adminForm="ngForm">
+  <div class="form">
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="admin.adminName"
+        name="adminName"
+        placeholder="Enter Name"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="admin.adminContact"
+        name="adminContact"
+        placeholder="Enter Contact"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="admin.adminAddress"
+        name="adminAddress"
+        placeholder="Enter Address"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="admin.adminEmail"
+        name="adminEmail"
+        placeholder="Enter Email"
+        required
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="addAdmin(); clearFields()"
+    >
+      Add Admin
+    </button>
+  </div>
+</form>
+</div>
