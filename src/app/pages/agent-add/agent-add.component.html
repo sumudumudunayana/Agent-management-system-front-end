@@ -1,0 +1,80 @@
+<div class="banner">
+  <app-navbar></app-navbar>
+  <form #agentForm="ngForm">
+  <div class="form">
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="agent.agentName"
+        name="agentName"
+        placeholder="Enter Name"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="agent.agentContact"
+        name="agentContact"
+        placeholder="Enter Contact"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="agent.agentAddress"
+        name="agentAddress"
+        placeholder="Enter Address"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="agent.agentEmail"
+        name="agentEmail"
+        placeholder="Enter Email"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="agent.agentRating"
+        name="agentRating"
+        placeholder="Enter Rating (0-10)"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="agent.agentDate"
+        name="agentDate"
+        placeholder="Enter Date"
+        required
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="addAgent(); clearFields()"
+    >
+      Add Agent
+    </button>
+  </div>
+</form>
+</div>
