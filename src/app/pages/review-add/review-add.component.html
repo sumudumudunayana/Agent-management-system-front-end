@@ -1,0 +1,36 @@
+<div class="banner">
+  <app-navbar></app-navbar>
+  <form #propertyForm="ngForm">
+    <div class="form">
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="review.rating"
+          name="rating"
+          placeholder="Enter Rating (1-10)"
+          required
+        />
+      </div>
+
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="review.review"
+          name="review"
+          placeholder="Enter Review"
+          required
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="addReview(); clearFields()"
+      >
+        Add Review
+      </button>
+    </div>
+  </form>
+</div>
