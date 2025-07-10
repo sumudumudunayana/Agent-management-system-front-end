@@ -1,0 +1,43 @@
+<div class="banner">
+  <app-navbar></app-navbar>
+  <div class="searchbar">
+    <input
+      type="text"
+      class="search"
+      placeholder="Enter Client ID"
+      [(ngModel)]="id"
+    />
+    <button class="searchbtn" (click)="getClientInfo()">Search</button>
+  </div>
+
+  <div class="details">
+    <div *ngIf="clientInfo.id">
+      <p>
+        Client ID: <span class="txt">{{ clientInfo.id }}</span>
+      </p>
+      <p>
+        First Name:
+        <input class="txt" [(ngModel)]="updatedClientInfo.clientFirstName" />
+      </p>
+      <p>
+        Last Name:
+        <input class="txt" [(ngModel)]="updatedClientInfo.clientLastName" />
+      </p>
+      <p>
+        Address:
+        <input class="txt" [(ngModel)]="updatedClientInfo.clientAddress" />
+      </p>
+      <p>
+        Email: <input class="txt" [(ngModel)]="updatedClientInfo.clientEmail" />
+      </p>
+      <p>
+        Contact Number:
+        <input class="txt" [(ngModel)]="updatedClientInfo.clientPhoneNumber" />
+      </p>
+      <div class="buttons">
+        <button (click)="updateClient()" class="update">Update</button>
+        <button (click)="deleteClient()" class="delete">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
