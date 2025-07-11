@@ -1,0 +1,24 @@
+<div class="banner">
+    <app-navbar></app-navbar>
+    
+    <div class="property-table-container">
+        <table class="property-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Rating</th>
+              <th>Review</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let review of reviewInfo">
+              <td>{{ review.id }}</td>
+              <td>{{review.rating }}</td>
+              <td>{{ review.review }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    
