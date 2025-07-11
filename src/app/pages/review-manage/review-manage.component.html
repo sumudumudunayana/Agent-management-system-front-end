@@ -1,0 +1,33 @@
+<div class="banner">
+    <app-navbar></app-navbar>
+    <div class="searchbar">
+      <input
+        type="text"
+        class="search"
+        placeholder="Enter Review ID"
+        [(ngModel)]="id"
+      />
+      <button class="searchbtn" (click)="getReviewInfo()">Search</button>
+    </div>
+  
+    <div class="details">
+      <div *ngIf="reviewInfo.id">
+        <p>
+          Client ID: <span class="txt">{{ reviewInfo.id }}</span>
+        </p>
+        <p>
+          Rating :
+          <input class="txt" [(ngModel)]="updatedReviewInfo.rating" />
+        </p>
+        <p>
+          Review :
+          <input class="txt" [(ngModel)]="updatedReviewInfo.review" />
+        </p>
+        <div class="buttons">
+          <button (click)="updateReview()" class="update">Update</button>
+          <button (click)="deleteReview()" class="delete">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
