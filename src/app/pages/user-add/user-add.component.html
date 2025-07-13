@@ -1,0 +1,79 @@
+<div class="banner">
+  <app-navbar></app-navbar>
+  <form #userForm="ngForm">
+  <div class="form">
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.userFirstName"
+        name="userFirstName"
+        placeholder="Enter First Name"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.userLastMame"
+        name="userLastMame"
+        placeholder="Enter Last Name"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.userAddress"
+        name="userAddress"
+        placeholder="Enter  Address"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.userEmail"
+        name="userEmail"
+        placeholder="Enter Email"
+        required
+      />
+    </div>
+
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.userPhoneNumber"
+        name="userPhoneNumber"
+        placeholder="Enter phone number"
+        required
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.userDate"
+        name="userDate"
+        placeholder="Enter Date"
+        required
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="addUser(); clearFields()"
+    >
+      Add User
+    </button>
+  </div>
+</form>
+</div>
